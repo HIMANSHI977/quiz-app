@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Result</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg1"></div>
+<div class="bg2"></div>
+
+<div class="container">
+  <h1 id="finalScore"></h1>
+  <button onclick="restart()">Restart</button>
+</div>
+
+<script>
+let score = Number(localStorage.getItem("score"));
+
+let message = "";
+
+if (score == 10) message = "Excellent 🎉";
+else if (score >= 7) message = "Great Job 👍";
+else if (score >= 4) message = "Good Try 🙂";
+else message = "Keep Practicing 💪";
+
+document.getElementById("finalScore").innerText =
+  "Score: " + score + "/10\n" + message;
+
+function restart() {
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg1"></div>
+<div class="bg2"></div>
+
+<div class="container">
+  <h1>Welcome 🎯</h1>
+  <p>Test your skills</p>
+  <button onclick="startQuiz()">Start Quiz</button>
+</div>
+
+<script>
+function startQuiz() {
+  localStorage.setItem("score", 0);
+  localStorage.setItem("index", 0);
+  window.location.href = "quiz.html";
+}
+</script>
+
+</body>
+</html>
